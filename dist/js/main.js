@@ -8,6 +8,7 @@ window.addEventListener("load", () => {
 const sectionOne = document.querySelector("header");
 const navLogo = document.querySelector(".logo");
 const nav = document.querySelector("nav");
+const navLinks = document.querySelectorAll("nav ul li a");
 
 const sectionOneOptions = {
   rootMargin: "-150px 0px 0px 0px",
@@ -21,12 +22,28 @@ const sectionOneObesrver = new IntersectionObserver(function (
     if (!entry.isIntersecting) {
       navLogo.classList.add("active");
       nav.classList.add("active");
+      navLinks.forEach((e) => {
+        e.classList.add("active");
+      });
     } else {
       navLogo.classList.remove("active");
       nav.classList.remove("active");
+      navLinks.forEach((e) => {
+        e.classList.remove("active");
+      });
     }
   });
 },
 sectionOneOptions);
 
 sectionOneObesrver.observe(sectionOne);
+
+document.getElementById("scroll-btn").addEventListener("click", () => {
+  document.querySelector("main").scrollIntoView();
+});
+let burger = document.getElementById("burger");
+let navOpen = document.querySelector(".links");
+burger.addEventListener("click", () => {
+  burger.classList.toggle("open");
+  navOpen.classList.toggle("open");
+});
