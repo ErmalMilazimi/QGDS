@@ -1,6 +1,13 @@
 @media only screen and(max-height:700px) {
   header {
-    height: 700px;
+    .header-txt {
+      font-size: 2.5rem;
+    }
+  }
+}
+@media only screen and(max-height:600px) {
+  header {
+    height: 600px;
   }
 }
 @media only screen and(max-width:1200px) {
@@ -72,6 +79,15 @@
   }
 }
 @media only screen and(max-width:600px) {
+  .loader {
+    &-logo {
+      width: 120px;
+      height: 120px;
+    }
+    &-txt {
+      width: 400px;
+    }
+  }
   header {
     nav {
       padding: 0 20px;
@@ -89,6 +105,15 @@
   }
 }
 @media only screen and(max-width:500px) {
+  .loader {
+    &-logo {
+      width: 100px;
+      height: 100px;
+    }
+    &-txt {
+      width: 350px;
+    }
+  }
   header {
     .header-bg {
       width: 200%;
@@ -105,7 +130,9 @@
   }
 }
 @media only screen and(max-width:400px) {
-  // header {
-
-  // }
+  .loader {
+    &-txt {
+      width: 300px;
+    }
+  }
 }
