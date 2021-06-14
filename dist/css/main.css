@@ -339,14 +339,89 @@ header .scroll-btn i:nth-child(3) {
 }
 
 main {
-  height: 100vh;
   padding: 90px 50px 0 50px;
+  overflow: hidden;
+}
+
+main .scroll-fade-in {
+  opacity: 0;
+  top: 200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+main .scroll-fade-in.active {
+  opacity: 1;
+  top: 0;
+}
+
+main .aboutUs {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5%;
+}
+
+main .aboutUs-title {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #4573b5;
+}
+
+main .aboutUs-left, main .aboutUs-right {
+  width: 47.5%;
+}
+
+main .aboutUs-left-title, main .aboutUs-right-title {
+  font-size: 1.5rem;
+  color: #4573b5;
+}
+
+main .aboutUs-left-desc, main .aboutUs-right-desc {
+  font-size: 1.1rem;
+  margin: 30px 0;
+  color: #7fb3dc;
+}
+
+main .jobs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+}
+
+main .jobs-desc {
+  font-size: 1.3rem;
+}
+
+main .jobs-desc-title {
+  color: #4573b5;
+}
+
+main .jobs-desc-txt {
+  color: #7fb3dc;
 }
 
 footer {
   background-color: #bdccd8;
   width: 100%;
-  padding: 50px;
+  padding: 50px 50px 20px 50px;
   min-height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,28 +433,76 @@ footer {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  gap: 20px;
+}
+
+footer .footer-left,
+footer .footer-right {
+  width: 500px;
+}
+
+footer .footer-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer .footer-left-img {
-  width: 400px;
+  width: 100%;
   margin-bottom: 50px;
 }
 
 footer .footer-left-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   text-align: center;
+  font-size: 1.3rem;
+  gap: 20px;
 }
 
-footer .footer-left-txt p {
-  font-size: 1.3rem;
+footer .footer-left-txt-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: #4573b5;
 }
 
-footer .footer-left-txt p a {
+footer .footer-left-txt-p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #4573b5;
+}
+
+footer .footer-left-txt-p a {
   text-decoration: none;
   color: #4573b5;
 }
 
 footer .footer-right iframe {
+  width: 100%;
   height: 250px;
   border-radius: 15px;
 }
@@ -495,6 +618,39 @@ footer .footer-copyright {
             transform: translateX(0);
     width: 200px;
   }
+  main {
+    padding: 90px 20px 0 20px;
+  }
+  main .aboutUs {
+    gap: 0;
+  }
+  main .aboutUs-title {
+    font-size: 1.5rem;
+  }
+  main .aboutUs-left, main .aboutUs-right {
+    width: 100%;
+  }
+  main .aboutUs-left-title, main .aboutUs-right-title {
+    font-size: 1.2rem;
+  }
+  main .aboutUs-left-desc, main .aboutUs-right-desc {
+    font-size: 0.9rem;
+  }
+  main .aboutUs-right {
+    padding-bottom: 30px;
+  }
+  main .aboutUs-right-desc {
+    margin: 0;
+  }
+  main .aboutUs-right-title {
+    margin: 30px 0;
+  }
+  main .jobs-desc-title {
+    font-size: 1.3rem;
+  }
+  main .jobs-desc-txt {
+    font-size: 0.9rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -507,7 +663,7 @@ footer .footer-copyright {
   }
   header .header-bg {
     width: 200%;
-    height: 60%;
+    height: 50%;
     left: -50%;
     right: -50%;
     top: 45%;
@@ -516,6 +672,9 @@ footer .footer-copyright {
     margin: 0 auto;
     width: 50%;
     height: 100%;
+  }
+  footer .footer-left-txt {
+    font-size: 1rem;
   }
 }
 
