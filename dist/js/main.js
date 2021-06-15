@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
     loader.parentElement.removeChild(loader);
   }, 10);
 });
-
 const sectionOne = document.querySelector("header");
 const navLogo = document.querySelector(".logo");
 const nav = document.querySelector("nav");
@@ -72,3 +71,13 @@ fadeInOptions);
 scrollFadeIn.forEach((element) => {
   appearOnScroll.observe(element);
 });
+// Swiper Code
+const swiper = new Swiper(".swiper-container", {
+  direction: "horizontal",
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+//
