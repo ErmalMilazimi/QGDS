@@ -339,7 +339,7 @@ header .scroll-btn i:nth-child(3) {
 }
 
 main {
-  padding: 90px 50px 0 50px;
+  padding: 90px 50px 50px 50px;
   overflow: hidden;
 }
 
@@ -675,6 +675,29 @@ main .jobs-container-special-cards-card::before {
   z-index: 0;
 }
 
+main .processes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+main .processes-title {
+  font-size: 1.6rem;
+  color: #4573b5;
+}
+
+main .processes p {
+  font-size: 1.3rem;
+  color: #7fb3dc;
+}
+
 footer {
   background-color: #b0e0e6;
   width: 100%;
@@ -772,6 +795,85 @@ footer .footer-copyright {
   color: #4573b5;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+body .second-page-header {
+  height: 40vh;
+  position: relative;
+}
+
+body .second-page-header-txt {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 3rem;
+  color: #4573b5;
+}
+
+body main .contact-txt {
+  width: 90%;
+  min-height: 300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  color: #4573b5;
+}
+
+body main .contact-txt-bottom {
+  width: 100%;
+  text-align: center;
+}
+
+body main .contact-txt a {
+  color: #4573b5;
+  text-decoration: none;
+}
+
+body main .contact-txt i {
+  margin-right: 20px;
+}
+
+body main .contact-map {
+  width: 90%;
+  height: 300px;
+  margin: 30px auto 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+body main .contact-map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+body .second-page-footer {
+  min-height: auto;
+  height: 100px;
+  position: relative;
+}
+
+body .second-page-footer .footer-copyright {
+  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 @media only screen and (max-height: 700px) {
   header .header-txt {
     font-size: 2.5rem;
@@ -829,6 +931,9 @@ footer .footer-copyright {
   main .jobs-container-special-cards-card {
     width: 95%;
   }
+  main .processes {
+    width: 80%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -883,6 +988,12 @@ footer .footer-copyright {
     width: 80%;
     height: 200px;
   }
+  main .contact-txt {
+    width: 100%;
+  }
+  main .contact-txt-left, main .contact-txt-right {
+    width: 400px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -909,7 +1020,7 @@ footer .footer-copyright {
     width: 200px;
   }
   main {
-    padding: 90px 20px 0 20px;
+    padding: 90px 20px 50px 20px;
   }
   main .aboutUs {
     gap: 0;
@@ -944,6 +1055,21 @@ footer .footer-copyright {
   main .jobs-desc-txt {
     font-size: 0.9rem;
   }
+  main .processes {
+    width: 90%;
+  }
+  main .processes-title {
+    font-size: 1.4rem;
+  }
+  main .processes p {
+    font-size: 1.1rem;
+  }
+  main .contact-txt {
+    font-size: 1.7rem;
+  }
+  main .contact-txt-left, main .contact-txt-right {
+    width: 350px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -965,6 +1091,24 @@ footer .footer-copyright {
     margin: 0 auto;
     width: 50%;
     height: 100%;
+  }
+  main .processes {
+    width: 100%;
+  }
+  main .processes-title {
+    font-size: 1.1rem;
+  }
+  main .processes p {
+    font-size: 0.9rem;
+  }
+  main .contact-txt {
+    font-size: 1.5rem;
+  }
+  main .contact-txt-left, main .contact-txt-right {
+    width: 100%;
+  }
+  main .contact-txt-bottom {
+    text-align: left;
   }
   footer .footer-left-txt {
     font-size: 1rem;

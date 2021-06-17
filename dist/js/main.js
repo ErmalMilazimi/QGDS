@@ -37,9 +37,11 @@ sectionOneOptions);
 
 sectionOneObesrver.observe(sectionOne);
 
-document.getElementById("scroll-btn").addEventListener("click", () => {
-  document.querySelector("main").scrollIntoView();
-});
+if (document.getElementById("scroll-btn") != null) {
+  document.getElementById("scroll-btn").addEventListener("click", () => {
+    document.querySelector("main").scrollIntoView();
+  });
+}
 let burger = document.getElementById("burger");
 let navOpen = document.querySelector(".links");
 burger.addEventListener("click", () => {
@@ -50,7 +52,7 @@ burger.addEventListener("click", () => {
 const scrollFadeIn = document.querySelectorAll(".scroll-fade-in");
 const fadeInOptions = {
   threshold: 0.2,
-  rootMargin: "0px 0px -50px 0px",
+  rootMargin: "0px 0px 0px 0px",
 };
 
 const appearOnScroll = new IntersectionObserver(function (

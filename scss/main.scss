@@ -239,7 +239,7 @@ header {
   }
 }
 main {
-  padding: 90px 50px 0 50px;
+  padding: 90px 50px 50px 50px;
   overflow: hidden;
   .scroll-fade-in {
     opacity: 0;
@@ -478,6 +478,21 @@ main {
       }
     }
   }
+  .processes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+    &-title {
+      font-size: 1.6rem;
+      color: $primary-font-color;
+    }
+    p {
+      font-size: 1.3rem;
+      color: $secondary-font-color;
+    }
+  }
 }
 footer {
   background-color: $background-color;
@@ -539,5 +554,5 @@ footer {
     color: $primary-font-color;
   }
 }
-
+@import "./kontakt";
 @import "./mediaqueries";
