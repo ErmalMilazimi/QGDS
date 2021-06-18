@@ -795,16 +795,39 @@ footer .footer-copyright {
   color: #4573b5;
 }
 
-body {
-  overflow-x: hidden;
+main .gallery-title {
+  color: red;
 }
 
-body .second-page-header {
-  height: 40vh;
+main .gallery-items {
+  width: 80%;
+  height: 350px;
+  border: 1px solid black;
+}
+
+main .gallery-items-slider {
+  width: 400px;
+  height: 300px;
+}
+
+main .gallery-items-slider .swiper-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+main .gallery-items-slider .swiper-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.second-page-header {
+  height: 50vh;
   position: relative;
 }
 
-body .second-page-header-txt {
+.second-page-header-txt {
   position: absolute;
   left: 50%;
   bottom: 20px;
@@ -814,7 +837,20 @@ body .second-page-header-txt {
   color: #4573b5;
 }
 
-body main .contact-txt {
+.second-page-header .second-header-bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 50vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("../img/banner.webp");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/banner.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+main .contact-txt {
   width: 90%;
   min-height: 300px;
   margin: 0 auto;
@@ -832,21 +868,21 @@ body main .contact-txt {
   color: #4573b5;
 }
 
-body main .contact-txt-bottom {
+main .contact-txt-bottom {
   width: 100%;
   text-align: center;
 }
 
-body main .contact-txt a {
+main .contact-txt a {
   color: #4573b5;
   text-decoration: none;
 }
 
-body main .contact-txt i {
+main .contact-txt i {
   margin-right: 20px;
 }
 
-body main .contact-map {
+main .contact-map {
   width: 90%;
   height: 300px;
   margin: 30px auto 0 auto;
@@ -854,24 +890,26 @@ body main .contact-map {
   overflow: hidden;
 }
 
-body main .contact-map iframe {
+main .contact-map iframe {
   width: 100%;
   height: 100%;
 }
 
-body .second-page-footer {
+.second-page-footer {
+  padding: 0;
   min-height: auto;
   height: 100px;
   position: relative;
 }
 
-body .second-page-footer .footer-copyright {
+.second-page-footer .footer-copyright {
   margin-top: 0;
   position: absolute;
   top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 @media only screen and (max-height: 700px) {
@@ -957,6 +995,9 @@ body .second-page-footer .footer-copyright {
     margin: 0 auto;
     width: 75%;
     height: 100%;
+  }
+  header .second-page-header-txt {
+    font-size: 2.5rem;
   }
   main .jobs-container-special-cards-card {
     height: auto;
@@ -1091,6 +1132,9 @@ body .second-page-footer .footer-copyright {
     margin: 0 auto;
     width: 50%;
     height: 100%;
+  }
+  header .second-page-header-txt {
+    font-size: 2.2rem;
   }
   main .processes {
     width: 100%;

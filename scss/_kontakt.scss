@@ -1,62 +1,76 @@
-body {
-  overflow-x: hidden;
-  .second-page-header {
-    height: 40vh;
-    position: relative;
-    &-txt {
-      position: absolute;
-      left: 50%;
-      bottom: 20px;
-      transform: translateX(-50%);
-      font-size: 3rem;
+.second-page-header {
+  height: 50vh;
+  position: relative;
+  &-txt {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: $primary-font-color;
+  }
+  .second-header-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 50vh;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url("../img/banner.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+main {
+  .contact-txt {
+    width: 90%;
+    min-height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    color: $primary-font-color;
+    &-bottom {
+      width: 100%;
+      text-align: center;
+    }
+    a {
       color: $primary-font-color;
+      text-decoration: none;
+    }
+    i {
+      margin-right: 20px;
     }
   }
-  main {
-    .contact-txt {
-      width: 90%;
-      min-height: 300px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      font-size: 2rem;
-      color: $primary-font-color;
-      &-bottom {
-        width: 100%;
-        text-align: center;
-      }
-      a {
-        color: $primary-font-color;
-        text-decoration: none;
-      }
-      i {
-        margin-right: 20px;
-      }
-    }
-    .contact-map {
-      width: 90%;
-      height: 300px;
-      margin: 30px auto 0 auto;
-      border-radius: 15px;
-      overflow: hidden;
-      iframe {
-        width: 100%;
-        height: 100%;
-      }
+  .contact-map {
+    width: 90%;
+    height: 300px;
+    margin: 30px auto 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    iframe {
+      width: 100%;
+      height: 100%;
     }
   }
-  .second-page-footer {
-    min-height: auto;
-    height: 100px;
-    position: relative;
-    .footer-copyright {
-      margin-top: 0;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+}
+.second-page-footer {
+  padding: 0;
+  min-height: auto;
+  height: 100px;
+  position: relative;
+  .footer-copyright {
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
   }
 }

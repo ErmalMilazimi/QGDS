@@ -90,6 +90,11 @@
         height: 100%;
       }
     }
+    .second-page-header {
+      &-txt {
+        font-size: 2.5rem;
+      }
+    }
   }
   main {
     .jobs {
@@ -233,6 +238,11 @@
         margin: 0 auto;
         width: 50%;
         height: 100%;
+      }
+    }
+    .second-page-header {
+      &-txt {
+        font-size: 2.2rem;
       }
     }
   }
