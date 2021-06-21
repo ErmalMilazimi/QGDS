@@ -67,6 +67,17 @@
     .processes {
       width: 80%;
     }
+    .gallery-items {
+      margin: 30px 0;
+      &-txt {
+        text-align: center;
+        font-size: 1.3rem;
+      }
+      &-txt,
+      &-slider {
+        width: 500px;
+      }
+    }
   }
 }
 @media only screen and(max-width:800px) {
@@ -215,6 +226,15 @@
         width: 350px;
       }
     }
+    .gallery-items {
+      &-txt {
+        font-size: 1.2rem;
+      }
+      &-txt,
+      &-slider {
+        width: 450px;
+      }
+    }
   }
 }
 @media only screen and(max-width:500px) {
@@ -266,6 +286,15 @@
         text-align: left;
       }
     }
+    .gallery-items {
+      &-txt {
+        font-size: 1.1rem;
+      }
+      &-txt,
+      &-slider {
+        width: 400px;
+      }
+    }
   }
   footer {
     .footer-left {
@@ -279,6 +308,17 @@
   .loader {
     &-txt {
       width: 300px;
+    }
+  }
+  main {
+    .gallery-items {
+      &-txt {
+        font-size: 1rem;
+      }
+      &-txt,
+      &-slider {
+        width: 100%;
+      }
     }
   }
 }

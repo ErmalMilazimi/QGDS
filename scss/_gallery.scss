@@ -1,13 +1,32 @@
 main {
   .gallery-title {
-    color: red;
+    color: $primary-font-color;
+    font-size: 1.8rem;
+    text-align: center;
   }
   .gallery-items {
-    width: 80%;
-    height: 350px;
-    border: 1px solid black;
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    &.flex-reverse {
+      flex-direction: row-reverse;
+    }
+    &-txt,
     &-slider {
-      width: 400px;
+      width: 40%;
+    }
+    &-txt {
+      color: $secondary-font-color;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-slider {
       height: 300px;
       .swiper-container {
         width: 100%;

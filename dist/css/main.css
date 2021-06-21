@@ -796,17 +796,56 @@ footer .footer-copyright {
 }
 
 main .gallery-title {
-  color: red;
+  color: #4573b5;
+  font-size: 1.8rem;
+  text-align: center;
 }
 
 main .gallery-items {
-  width: 80%;
-  height: 350px;
-  border: 1px solid black;
+  width: 100%;
+  min-height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .gallery-items.flex-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main .gallery-items-txt, main .gallery-items-slider {
+  width: 40%;
+}
+
+main .gallery-items-txt {
+  color: #7fb3dc;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main .gallery-items-slider {
-  width: 400px;
   height: 300px;
 }
 
@@ -972,6 +1011,16 @@ main .contact-map iframe {
   main .processes {
     width: 80%;
   }
+  main .gallery-items {
+    margin: 30px 0;
+  }
+  main .gallery-items-txt {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  main .gallery-items-txt, main .gallery-items-slider {
+    width: 500px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1111,6 +1160,12 @@ main .contact-map iframe {
   main .contact-txt-left, main .contact-txt-right {
     width: 350px;
   }
+  main .gallery-items-txt {
+    font-size: 1.2rem;
+  }
+  main .gallery-items-txt, main .gallery-items-slider {
+    width: 450px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1154,6 +1209,12 @@ main .contact-map iframe {
   main .contact-txt-bottom {
     text-align: left;
   }
+  main .gallery-items-txt {
+    font-size: 1.1rem;
+  }
+  main .gallery-items-txt, main .gallery-items-slider {
+    width: 400px;
+  }
   footer .footer-left-txt {
     font-size: 1rem;
   }
@@ -1162,6 +1223,12 @@ main .contact-map iframe {
 @media only screen and (max-width: 400px) {
   .loader-txt {
     width: 300px;
+  }
+  main .gallery-items-txt {
+    font-size: 1rem;
+  }
+  main .gallery-items-txt, main .gallery-items-slider {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
