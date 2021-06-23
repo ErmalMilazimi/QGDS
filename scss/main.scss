@@ -175,18 +175,18 @@ header {
       }
     }
   }
-  .header-txt {
-    font-size: 3rem;
-    position: absolute;
-    top: 250px;
-    left: 60px;
-    &-p1 {
-      color: $primary-font-color;
-    }
-    &-p2 {
-      color: $secondary-font-color;
-    }
-  }
+  // .header-txt {
+  //   font-size: 3rem;
+  //   position: absolute;
+  //   top: 250px;
+  //   left: 60px;
+  //   &-p1 {
+  //     color: $primary-font-color;
+  //   }
+  //   &-p2 {
+  //     color: $secondary-font-color;
+  //   }
+  // }
   .header-bg {
     position: absolute;
     width: 85%;
@@ -204,37 +204,6 @@ header {
         width: 100%;
         height: 100%;
       }
-    }
-  }
-  .scroll-btn {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    font-size: 2rem;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    animation: scrollAnimation 1s linear alternate infinite;
-    i:nth-child(1) {
-      position: relative;
-      bottom: -10px;
-      color: $secondary-font-color;
-    }
-    i:nth-child(2) {
-      color: $primary-font-color;
-    }
-    i:nth-child(3) {
-      position: relative;
-      bottom: 10px;
-      color: $secondary-font-color;
-    }
-  }
-  @keyframes scrollAnimation {
-    0% {
-      bottom: 30px;
-    }
-    100% {
-      bottom: 50px;
     }
   }
 }
@@ -297,7 +266,6 @@ main {
   .jobs {
     display: flex;
     flex-direction: column;
-    gap: 50px;
     margin: 90px 0;
     &-desc {
       font-size: 1.3rem;
@@ -310,11 +278,11 @@ main {
       }
     }
     &-container {
-      &-title {
-        color: $primary-font-color;
-        font-size: 1.5rem;
-        text-align: center;
-      }
+      // &-title {
+      //   color: $primary-font-color;
+      //   font-size: 1.5rem;
+      //   text-align: center;
+      // }
       &-cards {
         margin-top: 50px;
         display: flex;

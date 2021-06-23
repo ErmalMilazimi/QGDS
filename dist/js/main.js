@@ -36,12 +36,6 @@ const sectionOneObesrver = new IntersectionObserver(function (
 sectionOneOptions);
 
 sectionOneObesrver.observe(sectionOne);
-
-if (document.getElementById("scroll-btn") != null) {
-  document.getElementById("scroll-btn").addEventListener("click", () => {
-    document.querySelector("main").scrollIntoView();
-  });
-}
 let burger = document.getElementById("burger");
 let navOpen = document.querySelector(".links");
 burger.addEventListener("click", () => {
