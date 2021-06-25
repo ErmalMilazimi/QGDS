@@ -26,6 +26,90 @@
   }
 }
 main {
+  .form-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    &-elements {
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 50px;
+      input[type="text"] {
+        border: 1px solid transparent;
+        border-bottom: 1px solid black;
+        outline: none;
+        font-size: 1.2rem;
+        padding: 3px 10px;
+      }
+      input[type="number"] {
+        padding: 3px 10px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid black;
+        outline: none;
+        font-size: 1.2rem;
+      }
+      input[type="date"] {
+        padding: 3px 10px;
+        border: 1px solid transparent;
+        border-bottom: 1px solid black;
+        outline: none;
+        font-size: 1.2rem;
+      }
+      label {
+        font-size: 1.3rem;
+        margin: 15px 0 5px 0;
+      }
+      .services {
+        input[type="checkbox"] {
+          display: none;
+        }
+        label {
+          display: inline-block;
+          margin: 5px;
+          padding: 5px 10px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        input[type="checkbox"]:checked + label {
+          background-color: #90ee90;
+        }
+      }
+      textarea {
+        padding: 5px;
+        font-size: 1.2rem;
+        outline: none;
+      }
+      button {
+        width: 200px;
+        padding: 7.5px 15px;
+        border: none;
+        border-radius: 10px;
+        background-color: $secondary-font-color;
+        color: #fff;
+        font-size: 1.2rem;
+        margin: 20px auto 0 auto;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      input[type="text"]:hover,
+      input[type="text"]:focus,
+      input[type="number"]:hover,
+      input[type="number"]:focus {
+        border-bottom: 1px solid $secondary-font-color;
+      }
+      textarea:hover,
+      textarea:focus {
+        border: 1px solid $secondary-font-color;
+      }
+      button:hover,
+      button:focus {
+        background-color: $primary-font-color;
+      }
+    }
+  }
   .contact-txt {
     width: 90%;
     min-height: 300px;
