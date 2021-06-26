@@ -880,6 +880,13 @@ main .form-container-elements label {
   margin: 15px 0 5px 0;
 }
 
+main .form-container-elements label i {
+  color: red;
+  font-size: 1rem;
+  position: relative;
+  top: -5px;
+}
+
 main .form-container-elements .services input[type="checkbox"] {
   display: none;
 }

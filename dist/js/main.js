@@ -69,6 +69,7 @@ scrollFadeIn.forEach((element) => {
 
 function sendMail() {
   if (checkInputs()) {
+    window.alert("Bitte geben Sie die markierten Daten ein!");
   } else {
     var inputs = document.querySelectorAll("input");
     var textarea = document.querySelector("textarea");
@@ -76,7 +77,7 @@ function sendMail() {
     console.log(inputs);
     for (let i = 0; i < inputs.length; i++) {
       if (i === 0) {
-        message += "Name:" + inputs[0].value + "\n\n";
+        message += "Name: " + inputs[0].value + "\n\n";
       }
       if (i === 1) {
         message += "Nachname: " + inputs[1].value + "\n\n";

@@ -61,6 +61,12 @@ main {
       label {
         font-size: 1.3rem;
         margin: 15px 0 5px 0;
+        i {
+          color: red;
+          font-size: 1rem;
+          position: relative;
+          top: -5px;
+        }
       }
       .services {
         input[type="checkbox"] {
