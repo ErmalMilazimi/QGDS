@@ -71,11 +71,11 @@
   header {
     .header-bg {
       width: 150%;
-      height: 60%;
+      height: 70%;
       left: -20%;
       right: -20%;
-      top: 50%;
-      transform: translateY(-50%);
+      border-radius: 100% 0 70% 0;
+      bottom: 20px;
       .banner-container {
         margin: 0 auto;
         width: 75%;
@@ -151,7 +151,7 @@
     }
   }
   main {
-    padding: 90px 20px 50px 20px;
+    padding: 50px 20px;
     .aboutUs {
       gap: 0;
       &-title {
@@ -245,7 +245,7 @@
       width: 200%;
       left: -50%;
       right: -50%;
-      top: 50%;
+      bottom: 20px;
       .banner-container {
         margin: 0 auto;
         width: 50%;

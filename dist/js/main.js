@@ -1,8 +1,6 @@
 const loader = document.querySelector(".loader");
 window.addEventListener("load", () => {
-  setTimeout(function () {
-    loader.parentElement.removeChild(loader);
-  }, 10);
+  loader.parentElement.removeChild(loader);
 });
 const sectionOne = document.querySelector("header");
 const navLogo = document.querySelector(".logo");
@@ -45,8 +43,8 @@ burger.addEventListener("click", () => {
 
 const scrollFadeIn = document.querySelectorAll(".scroll-fade-in");
 const fadeInOptions = {
-  threshold: 0.2,
-  rootMargin: "0px 0px 0px 0px",
+  threshold: 0,
+  rootMargin: "10px 0px 0px 0px",
 };
 
 const appearOnScroll = new IntersectionObserver(function (
@@ -75,42 +73,60 @@ function sendMail() {
     var inputs = document.querySelectorAll("input");
     var textarea = document.querySelector("textarea");
     var message = "- - - - - - - - - - - -\n";
+    console.log(inputs);
     for (let i = 0; i < inputs.length; i++) {
       if (i === 0) {
-        message += "Firstname:" + inputs[0].value + "\n\n";
+        message += "Name:" + inputs[0].value + "\n\n";
       }
       if (i === 1) {
-        message += "Lastname: " + inputs[1].value + "\n\n";
+        message += "Nachname: " + inputs[1].value + "\n\n";
       }
       if (i === 2) {
-        message += "Location: " + inputs[2].value + "\n\n";
+        message += "Strasse Nr: " + inputs[2].value + "\n\n";
       }
       if (i === 3) {
-        message += "Date: " + inputs[3].value + "\n\n";
+        message += "PLZ Ort: " + inputs[3].value + "\n\n";
       }
       if (i === 4) {
-        message += "Number: " + inputs[4].value + "\n\n";
+        message += "Telefonnummer: " + inputs[4].value + "\n\n";
       }
     }
-    message += "Services: ";
+    message += "Dienstleistungen: ";
     for (let i = 5; i < inputs.length; i++) {
       if (i === 5 && inputs[5].checked) {
-        message += inputs[5].value + ", ";
+        message += inputs[5].value + " , ";
       }
       if (i === 6 && inputs[6].checked) {
-        message += inputs[6].value + ", ";
+        message += inputs[6].value + " , ";
       }
       if (i === 7 && inputs[7].checked) {
-        message += inputs[7].value + ", ";
+        message += inputs[7].value + " , ";
       }
       if (i === 8 && inputs[8].checked) {
-        message += inputs[8].value + ", ";
+        message += inputs[8].value + " , ";
       }
       if (i === 9 && inputs[9].checked) {
-        message += inputs[9].value + ", ";
+        message += inputs[9].value + " , ";
       }
       if (i === 10 && inputs[10].checked) {
-        message += inputs[10].value;
+        message += inputs[10].value + " , ";
+      }
+      if (i === 11 && inputs[11].checked) {
+        message += inputs[11].value + " , ";
+      }
+      if (i === 12 && inputs[12].checked) {
+        message += inputs[12].value;
+      }
+      if (i === 13) {
+        let dateSplit = inputs[13].value.split("-");
+        message +=
+          "\n\nDatum einstellen: Tag " +
+          dateSplit[2] +
+          " / Monat " +
+          dateSplit[1] +
+          " / Jahr " +
+          dateSplit[0] +
+          "\n\n";
       }
     }
     message += "\n\nComent: " + textarea.value + "\n- - - - - - - - - - - -\n";
@@ -119,7 +135,7 @@ function sendMail() {
       "mailto:milazimi39@gmail.com" +
       "?cc=milazimi39@gmail.com" +
       "&subject=" +
-      encodeURIComponent("New Work") +
+      encodeURIComponent("Neuer Termin") +
       "&body=" +
       encodeURIComponent(message);
     window.location.href = link;
