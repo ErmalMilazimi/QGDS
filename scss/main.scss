@@ -312,12 +312,6 @@ main {
           &:nth-child(3) {
             background-image: url("../img/cards/house-maintenance-cleaning.jpg");
           }
-          &:nth-child(4) {
-            background-image: url("../img/cards/final-cleaning.jpg");
-          }
-          &:nth-child(5) {
-            background-image: url("../img/cards/removal-cleaning.jpg");
-          }
           &:hover .jobs-container-cards-card-txt-desc {
             display: block;
           }
@@ -372,7 +366,7 @@ main {
             }
           }
           &-slider {
-            width: 45%;
+            width: 40%;
             height: 230px;
             z-index: 1;
             .swiper-container {

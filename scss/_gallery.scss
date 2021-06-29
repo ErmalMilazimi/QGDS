@@ -15,11 +15,9 @@ main {
     &.flex-reverse {
       flex-direction: row-reverse;
     }
-    &-txt,
-    &-slider {
-      width: 40%;
-    }
+
     &-txt {
+      width: 40%;
       color: $secondary-font-color;
       font-size: 1.5rem;
       display: flex;
@@ -27,15 +25,18 @@ main {
       align-items: center;
     }
     &-slider {
-      height: 300px;
+      width: 35%;
+      height: 350px;
       .swiper-container {
         width: 100%;
         height: 100%;
         border-radius: 15px;
+        background-color: rgba(0, 0, 0, 0.04);
         overflow: hidden;
         img {
           width: 100%;
           height: 100%;
+          object-fit: contain;
         }
       }
     }
