@@ -167,6 +167,19 @@ const checkInputs = () => {
   return false;
 };
 //
+// const fullScreen = (element) => {
+//   let div = document.getElementById(element.id);
+//   div.classList.add("slider-full-screen");
+//   let btn = document.getElementById("btn-" + element.id);
+//   document.querySelector("body").style = "overflow: hidden;";
+//   btn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     e.stopPropagation();
+//     div.classList = "gallery-items-slider";
+//     document.querySelector("body").style = "overflow: auto;";
+//   });
+// };
+//
 const swiper = new Swiper(".swiper-container", {
   direction: "horizontal",
   loop: true,
